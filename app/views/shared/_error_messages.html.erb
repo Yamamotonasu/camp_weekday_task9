@@ -1,0 +1,7 @@
+<% if @task.errors.any? %>
+  <ul>
+    <% @task.errors.full_messages.each do |msg| %>
+      <li class="error-message"><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>

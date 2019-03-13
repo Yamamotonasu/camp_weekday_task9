@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+.error-message {
+  color: red;
+  list-style: none;
+}
+
+.flash-messages {
+  color: blue;
+}

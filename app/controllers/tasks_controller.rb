@@ -2,6 +2,7 @@ class TasksController < ApplicationController
   before_action :set_task, only: [ :show, :destroy, :edit, :update ]
 
   def index
+    @new_tasks = Task.find_newest_task
   end
 
   def show
@@ -38,6 +39,7 @@ class TasksController < ApplicationController
   end
 
   def hide
+    @tasks = Task.all
   end
 
   private

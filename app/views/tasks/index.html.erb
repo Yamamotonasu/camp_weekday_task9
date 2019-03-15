@@ -1,10 +1,8 @@
 <h1>タスク一覧</h1>
 <% @new_tasks.each do |new_task| %>
-  <% if new_task.is_display == true %>
-    <ul>
-      <li><%= link_to new_task.title, new_task, class: "status-#{new_task.status}"  %> <%= new_task.created_at.strftime('%Y年%m月%d日') %></li>
-    </ul>
-  <% end %>
+  <ul>
+    <li><%= link_to new_task.title, new_task, class: "status-#{new_task.status}" %> <%= new_task.created_at.strftime('%Y年%m月%d日') %></li>
+  </ul>
 <% end %>
-<%= link_to "出品する", new_task_path %>
+<%= link_to "登録する", new_task_path %>
 <%= link_to "非表示一覧", tasks_hide_path %>
